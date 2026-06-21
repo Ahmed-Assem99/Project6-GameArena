@@ -1,0 +1,23 @@
+:root{
+    --main-color:#CAFE1C;
+}
+.main-color{
+    color: var(--main-color);
+}
+
+ .nav-link {
+    color: white;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: var(--main-color);
+}
+.btn{
+    background-color: var(--main-color);
+    width: 100px;
+    font-weight: bold;
+
+}
+.hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url(./images/hero-bg.jpg);
+background-size: cover;
+}

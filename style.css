@@ -4,20 +4,99 @@
 .main-color{
     color: var(--main-color);
 }
+.main-bg{
+    background-color: #0A0F13;
+}
+body {
+  font-family: "Days One", sans-serif;
+}
+.btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+.btn-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+.btn-shine:hover::before {
+    left: 150%;
+}
+/* ---------Navbar Section-------------   */
+nav{ 
 
- .nav-link {
+    .nav-link {
     color: white;
-}
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+        font-family: "Chakra Petch", sans-serif;}
+
+    .navbar-brand,.navbar-nav .nav-link.active, .navbar-nav .nav-link.show,.nav-link:focus, .nav-link:hover,.navbar-brand:focus, .navbar-brand:hover{
     color: var(--main-color);
-}
-.btn{
+    font-family: "Chakra Petch", sans-serif;}
+    .btn{
     background-color: var(--main-color);
     width: 100px;
     font-weight: bold;
+    transition: background-color 0.3s ease;}
+
+    .btn:hover{
+        background-color:#c9fe1cb7;
+    }
 
 }
+
+/* ----------Hero Section---------- */
 .hero{
     background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url(./images/hero-bg.jpg);
 background-size: cover;
+        h1{
+            font-size: 64px;
+        }
+        p{
+            font-family: "Chakra Petch", sans-serif;
+            color: #D1D5DB;
+        }
+    .btns{
+        & :nth-child(1){
+            background-color: var(--main-color);
+            padding: 20px 30px;
+        }
+        & :nth-child(1):hover{
+        background-color:#c9fe1cb7; ;
+        }
+        & :nth-child(2){
+            color: var(--main-color);
+            background-color: transparent;
+            border: 2px solid var(--main-color);
+            padding: 20px 30px;
+        }
+        & :nth-child(2):hover{
+            background-color: var(--main-color);
+            color: black;
+        }
+    }
+      .hero-r{
+            background: linear-gradient(to right,#CBFD1D,#04DF72);
+            padding: 4px;
+            border-radius: 20px;
+            
+            img{
+                max-height: 400px;
+            }
+            .hero-r-tag p{
+                margin-bottom: 4px;
+            }
+        }
+    
+
 }

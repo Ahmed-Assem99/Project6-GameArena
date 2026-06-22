@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/6eab70c0fb.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Games Arena</title>
   </head>
   <body>
-    <section>
-      <nav class="navbar navbar-expand-lg bg-black py-3">
+      <nav class="navbar navbar-expand-lg main-bg py-3 position-fixed w-100">
         <div class="container">
-        <i class="fa-solid fa-gamepad main-color fa-lg me-2"></i>
-          <a class="navbar-brand main-color" style="font-weight: bold;" href="#">GamesArena</a>
+          <i class="fa-solid fa-gamepad main-color fa-lg me-2"></i>
+          <a class="navbar-brand main-color fw-bold" href="#">GamesArena</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -33,44 +40,90 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active main-color" aria-current="page" href="#">Home</a>
+                <a
+                  class="nav-link active main-color"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">OUR GAMES</a>
+                <a class="nav-link fw-lighter" aria-current="page" href="#">OUR GAMES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">What We Do</a>
+                <a class="nav-link" aria-current="page" href="#">What We Do</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Our Team</a>
+                <a class="nav-link" aria-current="page" href="#">Our Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" aria-current="page" href="#">Contact Us</a>
               </li>
             </ul>
-            <i class="fa-regular fa-bell me-3 fa-lg" style="color: #ffffff;"></i>
-            <i class="fa-regular fa-message me-3 fa-lg" style="color: #ffffff;"></i>
-              <button class="btn" type="submit">
-                Sign In
-              </button>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+              <li class="nav-item">
+                <span>
+                <i
+                  class="fa-regular fa-bell me-3 fa-lg"
+                  style="color: #ffffff"
+                ></i>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span>
+                <i
+                  class="fa-regular fa-message me-3 fa-lg"
+                  style="color: #ffffff"
+                ></i>
+                </span>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-shine" type="submit">Sign In</button>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-    </section>
-    <div class="section">
-      <div class="hero w-100 vh-100 py-4">
-        <div class="container d-flex align-content-center justify-content-between">
-          <div class="hero-l w-50">
-            <h1 class="fs-1">
-              THE ULTIMATE <br> <span class="main-color">GAMING</span> <br>EXPERIENCE
+    <main class="hero vh-100">
+      <div
+        class="container d-flex align-items-center justify-content-center h-100"
+      >
+        <div
+          class="row align-items-center justify-content-between"
+        >
+          <div class="hero-l col-6">
+            <h1 class="fw-bold mb-3 text-white">
+              THE ULTIMATE <span class="main-color">GAMING</span> EXPERIENCE
             </h1>
+            <p class="mb-4">
+              Join millions of gamers worldwide in the most competitive eSports
+              tournaments. Experience next-level gaming with cutting-edge
+              technology and endless possibilities.
+            </p>
+            <div class="btns d-flex gap-3">
+              <button class="btn btn-shine">Start Gaming Now</button>
+              <button class="btn btn-shine">Watch Tournaments</button>
+            </div>
           </div>
-          <div class="hero-r w-50">
-            <img src="./images/hero-img.png" class="w-75 object-fit-contain" alt="">
-          </div>
+          <figure class="hero-r col-5 position-relative">
+            <div class="inner-hero-r">
+            <img
+              src="./images/hero-img.png"
+              class="object-fit-cover w-100 rounded-4"
+              alt="hero-img"
+            />
+            </div>
+            <div class="hero-r-tag position-absolute bg-black border border-dark rounded-3 d-flex align-items-center justify-content-between p-3 gap-2 start-0 translate-middle">
+              <i class="fa-solid fa-trophy fa-xl" style="color: rgb(201, 255, 25);"></i>
+              <div>
+                <p class="fs-6 text-secondary">Active Players</p>
+                <p class="text-white fs-4">2.5M+</p>
+              </div>
+            </div>
+          </figure>
         </div>
       </div>
-    </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

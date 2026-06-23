@@ -1,3 +1,4 @@
+/* ---------------Global Style-------------- */
 :root{
     --main-color:#CAFE1C;
 }
@@ -6,6 +7,30 @@
 }
 .main-bg{
     background-color: #0A0F13;
+}
+.main-padding{
+    padding: 100px 0;
+}
+.main-heading p{
+    &::before,&::after{
+        content: " ";
+        height: 2px;
+        width: 80px;
+        position: absolute;
+        top: 50%;
+        transform:translateY(-50%);
+    }
+    &::before{
+        left: 0;
+        transform: translateX(-130%);
+        background-image: linear-gradient(to right,#0A0F13,var(--main-color));
+
+    }
+    &::after{
+        right: 0;
+        transform: translateX(130%);
+         background-image: linear-gradient(to left,#0A0F13,var(--main-color));
+    }
 }
 body {
   font-family: "Days One", sans-serif;
@@ -52,13 +77,17 @@ nav{
     .btn:hover{
         background-color:#c9fe1cb7;
     }
-
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
+}
+
 
 /* ----------Hero Section---------- */
 .hero{
     background-image:linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url(./images/hero-bg.jpg);
-background-size: cover;
+background-size:cover;
+background-attachment: fixed;
         h1{
             font-size: 64px;
         }
@@ -98,5 +127,176 @@ background-size: cover;
             }
         }
     
+
+}
+/* ----------------------Our Games Section----------------- */
+.our-games{
+#carouselExample{
+    .game{
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    position: relative;
+}
+.game::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #b6f227;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.hover-game{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+    .label{
+        font-size: 10px;
+        color: white;
+        width: fit-content;
+        background-color: #2B491C;
+        transform: translateY(-100%);
+        transition: all 0.3s ease;
+            font-size: 10px;
+    transition: transform .3s ease;
+    }
+    .hover-bot span{
+        margin-bottom: 70px;
+        margin-left: 30px;
+        transform: translateY(200%);
+        transition: all 0.3s ease;
+    }
+
+}
+.game:hover .label,.game:hover .hover-bot span{
+        transform: translateY(0);
+    }
+.game:hover .hover-game{
+opacity: 1;
+background: linear-gradient(to top,#BBD727 5%,transparent 70%);
+}
+.game:hover::after{
+    opacity: 1;
+}
+.game img{
+    transition: transform 0.25s ease;
+}
+.game:hover img {
+  transform:scale(1.05);
+            }
+
+        .carousel-control-prev{
+            padding: 12px;
+            width: 3rem;
+            height: 3rem;
+            top: 110%;
+            left: 30%;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid oklch(37.3% .034 259.733); /* or whatever you want */
+            border-radius: 50%;  
+}
+.carousel-control-next:hover, .carousel-control-prev:hover{
+    border: 1px solid var(--main-color);
+
+}
+
+        }
+        .carousel-control-next{
+            top: 110%;
+            left: 40%;
+            padding: 12px;
+            width: 3rem;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid oklch(37.3% .034 259.733); /* or whatever you want */
+            border-radius: 50%;  
+        }
+            .btn{
+            color: var(--main-color);
+            background-color: transparent;
+            border: 2px solid var(--main-color);
+            padding: 20px 30px;
+            position: absolute;
+            top: 112%;
+            left: 70%;
+        }
+            .btn:hover{
+            background-color: var(--main-color);
+            color: black;
+            }
+    }
+
+/* -------------------What We Do Section ---------------------- */
+.icon-bg{
+    background-color: #1E2938;
+}
+.card-bg{
+    background-color: #1A1A1A;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.card-bg:hover{
+border: 2px solid var(--main-color)
+}
+.card-bg:hover i{
+    background-color: var(--main-color);
+    color:#1E2938 !important;
+
+}
+.card-bg::before,
+.card-bg::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.card-bg::before{
+    top: 20px;
+    left: 20px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    transform: translate(-20px, -20px);
+}
+
+.card-bg::after{
+    bottom: 20px;
+    right: 20px;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    transform: translate(20px, 20px);
+}
+.card-bg:hover::before,
+.card-bg:hover::after{
+    opacity: 1;
+    transform: translate(0);
+}
+.we-do hr{
+    opacity: 1;
+    margin: auto;
+    width: 50%;
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+  90deg,
+  transparent 0%,
+  #5eff00 10%,
+  #f0ff99 50%,
+  #5eff00 80%,
+  transparent 100%
+);
+      box-shadow: 0 0 20px 4px rgba(178, 255, 64, 0.5);
 
 }

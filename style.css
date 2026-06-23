@@ -2,6 +2,10 @@
 :root{
     --main-color:#CAFE1C;
 }
+::selection {
+  background-color: var(--main-color);
+  color: black;
+}
 .main-color{
     color: var(--main-color);
 }
@@ -356,10 +360,95 @@ to{
     color: #99A1AF;
     font-weight: light;
  }
+ /* ---------------------------Contact-Us Section--------------- */
+.contact-us{
+    background-color: #101727;
+}
+.contact-l{
+    .contact-card{
+        background-color: #1E2938;
+        border-radius: 24px;
+    }
+    .logo{
+        background-color: var(--main-color);
+        border-radius: 50%;
+    }
+}
+.gradient-card{
+    background-image: linear-gradient(to right,#C8FD21,#16DF71);
+    span{
+        border-radius: 50%;
+        height: 44px;
+        width: 44px;
+    }
+    span:hover{
+        opacity: 0.75;
+    }
+}
+.fit-content{
+    width: fit-content;
+}
+.inner-contact-r{
+        background-color: #1E2938;
+}
+.in-bg{
+    background-color: #364152;
+}
+.form-control::placeholder{
+        color: #9499A2 !important;
+}
+.form-control:focus{
+        background-color: #364152;
+        border: 1px solid var(--main-color) !important;
+        box-shadow: none;
 
+}
+.border-secondary{
+        border: 1px solid var(--main-color);
+}
+textarea.form-control{
+    min-height: 200px;
+}
+.box-color{
+        color: #9499A2 !important;
+}
+.contact-r{
+    .btn{
+    background-color: var(--main-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+height: 50px;}
 
-
-
-
-
-
+    .btn:hover{
+        background-color:#c9fe1cb7;
+    }
+    hr{
+        border: 1px solid #364152;
+        width: 80%;
+        opacity: 1;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+/* ---------------Footer Section--------------- */
+.p-color{
+    color: #99A1AF;
+        font-family: "Chakra Petch", sans-serif;
+}
+footer{
+    a{
+        color:#99A1AF ;
+        text-decoration: none;
+        font-family: "Chakra Petch", sans-serif;
+    }
+    a:hover{
+        color: var(--main-color);
+    }
+      hr{
+        border: 1px solid #364152;
+        width: 80%;
+        opacity: 0.5;
+        margin: auto;
+        margin-top: 40px;
+    }
+}

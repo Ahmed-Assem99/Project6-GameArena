@@ -300,3 +300,66 @@ border: 2px solid var(--main-color)
       box-shadow: 0 0 20px 4px rgba(178, 255, 64, 0.5);
 
 }
+/* --------------------------Slider Section--------------------------- */
+.slider{
+    background-image: radial-gradient(#AAD520 20%,#0A0F13 50%);
+    img{
+        width: 120px;
+        border-radius: 24px;
+    }
+    .slider-track{
+        animation:slider 20s linear infinite;
+    }
+    .slider-track2{
+        animation:slider 20s linear infinite reverse;
+    }
+    
+}
+@keyframes slider{
+
+to{
+    transform: translateX(-50%);
+}
+}
+/* ----------------------Our Team Section------------------------------- */
+ .our-team{
+    figure{
+        position: relative;
+        &:before{
+            content: "";
+            inset: 0;
+            position: absolute;
+            transition: all 0.5s linear;
+            backdrop-filter: grayscale(100%);
+            z-index: 2;
+        }
+        &:hover:before{
+            transform: translateY(-100%);
+        }
+        .label,.label-2{
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+        .label-2{
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+
+    }
+ }
+ .fs-7{
+    font-size: 14px;
+ }
+ .fs-8{
+    font-size: 12px;
+    color: #99A1AF;
+    font-weight: light;
+ }
+
+
+
+
+
+
+
